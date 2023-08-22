@@ -53,7 +53,8 @@ class CELLO3:
         print(f'Condition check passed? {valid}\n')
         
         if valid:
-            cont = input('\nContinue to evaluation? y/n ')
+            # cont = input('\nContinue to evaluation? y/n ')
+            cont = 'y'
             if (cont == 'Y' or cont == 'y') and valid:
                     best_result, worst_score = self.techmap(iter) # Executing the algorithm if things check out
 
@@ -622,15 +623,17 @@ if __name__ == '__main__':
     # vname = 'g77_boolean'
     # vname = 'g92_boolean'
     
-    vname = input('which verilog to test, without the .v? (hint, ___.v from your folder) \nname=')
-    print()
-    ucfname = input(f'which ucf to use? \n{list(zip(range(len(ucflist)), ucflist))} \nselect an index=')
-    try:
-        ucfname = ucflist[int(ucfname)]
-    except Exception as e:
-        ucfname = 'Eco1C1G1T1'
-        
-    
+    # vname = input('which verilog to test, without the .v? (hint, ___.v from your folder) \nname=')
+    # print()
+    # ucfname = input(f'which ucf to use? \n{list(zip(range(len(ucflist)), ucflist))} \nselect an index=')
+    # try:
+        # ucfname = ucflist[int(ucfname)]
+    # except Exception as e:
+        # ucfname = 'Eco1C1G1T1'
+
+    vname = "g77_boolean"
+    ucfname = "SC1C1G1T1"
+
     # (3in, 1out, 7gategroups)
     # ucfname = 'Bth1C1G1T1'
     
